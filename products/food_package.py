@@ -1,4 +1,4 @@
-#Write your code here
+from abc import ABC, abstractmethod
 
 class FoodPackage (ABC): 
     @abstractmethod
@@ -11,17 +11,25 @@ class FoodPackage (ABC):
         return f"Empaque: {self.pack()} , Material: {self.material()}"    
     
 class Wrapping(FoodPackage):  
-  #Write your code here
-  pass
+  def pack(self) -> str:
+        return "Envoltorio de papel"
+  def material(self) -> str:
+        return "Papel"
 
 class Bottle(FoodPackage):  
-  #Write your code here
-  pass
+    def pack(self) -> str:
+        return "Botella"
+    def material(self) -> str:
+        return "Plástico"
       
 class Glass(FoodPackage):  
-  #Write your code here
-  pass
+    def pack(self) -> str:
+        return "Vaso"
+    def material(self) -> str:
+        return "Cartón"
 
 class Box(FoodPackage):  
-  #Write your code here
-  pass
+    def pack(self) -> str:
+        return "Caja"
+    def material(self) -> str:
+        return "Cartón"
